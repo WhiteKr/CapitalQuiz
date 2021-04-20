@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         loadQuiz(quizCount)
 
         submitAnswer.setOnClickListener {
-            if (typeAnswer.text.trim() == answers[quizCount].trim()) {
+            if (typeAnswer.text.toString() == answers[quizCount]) {
                 Toast.makeText(this, "정답입니다!", Toast.LENGTH_SHORT).show()
                 oxStack.text = "${oxStack.text}O"
             } else {
